@@ -16,7 +16,7 @@ import {
   ActionSheetProvider,
   ActionSheetOptions,
 } from '@expo/react-native-action-sheet'
-import uuid from 'uuid'
+import { v4 as uuidv4 } from 'uuid';
 import { getBottomSpace } from 'react-native-iphone-x-helper'
 import dayjs from 'dayjs'
 import localizedFormat from 'dayjs/plugin/localizedFormat'
@@ -241,7 +241,7 @@ class GiftedChat<TMessage extends IMessage = IMessage> extends React.Component<
     text: undefined,
     placeholder: DEFAULT_PLACEHOLDER,
     disableComposer: false,
-    messageIdGenerator: () => uuid.v4(),
+    messageIdGenerator: () => uuidv4(),
     user: {},
     onSend: () => {},
     locale: null,
